@@ -1,0 +1,890 @@
+.wrapper {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .wrapper {
+        overflow-x: hidden;
+    }
+}
+
+/* Headings */
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 96px;
+    letter-spacing: -1.5px;
+    line-height: 112px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 52px;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.5px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 61px;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 64px;
+}
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 36px;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 67px;
+}
+
+h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 69px;
+}
+
+h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 68px;
+}
+
+/* Paragraphs */
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.topic-heading,
+.syntax-devider {
+    color: royalblue;
+}
+
+.syntax-devider {
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.topic-heading {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Lists */
+
+ul > li,
+ol > li {
+    padding: 0 16px;
+    overflow: hidden;
+    min-height: 48px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.15px;
+    line-height: 48px;
+    cursor: pointer;
+}
+
+/* Textfield - filled */
+
+.md__filled-textfield {
+    position: relative;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.md__filled-textfield > input {
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+    border-radius: 4px 4px 0 0;
+    padding: 0 12px 10px;
+    width: 100%;
+    height: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    caret-color: #6200ee;
+    transition: background-color 0.2s, border-bottom 0.2s;
+}
+
+.md__filled-textfield > span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    box-sizing: border-box;
+    padding: 7px 12px 0;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13.5px;
+    line-height: 18px;
+    pointer-events: none;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+.md__filled-textfield > input + span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #6200ee;
+    transform-origin: bottom center;
+    transform: scaleX(0);
+    transition: transform 0.1s;
+}
+
+.md__filled-textfield > input:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.87);
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.md__filled-textfield > input:not(:focus):placeholder-shown + span {
+    font-size: inherit;
+    line-height: 48px;
+}
+
+.md__filled-textfield > input:focus {
+    outline: none;
+}
+
+.md__filled-textfield > input:focus + span {
+    color: #6200ee;
+}
+
+.md__filled-textfield > input:focus + span:after {
+    transform: scaleX(1);
+}
+
+/* Outlined textfield */
+
+.md__outlined-textfield {
+    position: relative;
+    display: inline-block;
+    padding: 6px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.md__outlined-textfield > input {
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-top-color: transparent;
+    border-radius: 4px;
+    padding: 15px 13px 15px;
+    width: 100%;
+    height: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    caret-color: #6200ee;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.md__outlined-textfield > input + span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    border-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-height: 100%;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 15px;
+    cursor: text;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+.md__outlined-textfield > input + span:before,
+.md__outlined-textfield > input + span:after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    margin-top: 6px;
+    border-top: 1px solid;
+    border-top-color: rgba(0, 0, 0, 0.6);
+    min-width: 10px;
+    height: 8px;
+    pointer-events: none;
+    box-shadow: inset 0 1px transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.md__outlined-textfield > input + span::before {
+    margin-right: 4px;
+    border-left: 1px solid transparent;
+    border-radius: 4px 0;
+}
+
+.md__outlined-textfield > input + span::after {
+    flex-grow: 1;
+    margin-left: 4px;
+    border-right: 1px solid transparent;
+    border-radius: 0 4px;
+}
+
+.md__outlined-textfield:hover > input {
+    border-color: rgba(0, 0, 0, 0.87);
+    border-top-color: transparent;
+}
+
+.md__outlined-textfield:hover > input + span::before,
+.md__outlined-textfield:hover > input + span::after {
+    border-top-color: rgba(0, 0, 0, 0.87);
+}
+
+.md__outlined-textfield:hover > input:not(:focus):placeholder-shown {
+    border-color: rgba(0, 0, 0, 0.87);
+}
+
+.md__outlined-textfield > input:not(:focus):placeholder-shown {
+    border-top-color: rgba(0, 0, 0, 0.6);
+}
+
+.md__outlined-textfield > input:not(:focus):placeholder-shown + span {
+    font-size: inherit;
+    line-height: 68px;
+}
+
+.md__outlined-textfield > input:not(:focus):placeholder-shown + span::before,
+.md__outlined-textfield > input:not(:focus):placeholder-shown + span::after {
+    border-top-color: transparent;
+}
+
+.md__outlined-textfield > input:focus {
+    border-color: #6200ee;
+    border-top-color: transparent;
+    box-shadow: inset 1px 0 #6200ee, inset -1px 0 #6200ee, inset 0 -1px #6200ee;
+    outline: none;
+}
+
+.md__outlined-textfield > input:focus + span {
+    color: #6200ee;
+}
+
+.md__outlined-textfield > input:focus + span::before,
+.md__outlined-textfield > input:focus + span::after {
+    border-top-color: #6200ee !important;
+    box-shadow: inset 0 1px #6200ee;
+}
+
+/* Buttons */
+
+/* Contained buttons*/
+.md__button-contained {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 1.28px;
+    line-height: 36px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    padding: 0 16px;
+    min-width: 64px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    background-color: #6200ee;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    outline: none;
+    overflow: hidden;
+}
+
+.md__button-contained:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.md__button-contained:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    padding: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+}
+
+.md__button-contained:hover,
+.md__button-contained:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.md__button-contained:hover:before {
+    opacity: 0.08;
+}
+
+.md__button-contained:focus:before {
+    opacity: 0.24;
+}
+
+.md__button-contained:active {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.md__button-contained:active::after {
+    opacity: 0.32;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0s;
+}
+
+.md__button-contained:disabled {
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+    background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12);
+    box-shadow: none;
+    cursor: initial;
+}
+
+.md__button-contained:disabled::before,
+.md__button-contained:disabled::after {
+    opacity: 0;
+}
+
+/* Outlined buttons */
+.md__button-outlined {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #6200ee;
+    letter-spacing: 1.28px;
+    line-height: 36px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #6200ee;
+    border-radius: 4px;
+    padding: 0 15px;
+    height: 37px;
+    min-width: 64px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+}
+
+.md__button-outlined:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6200ee;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.md__button-outlined::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #6200ee;
+    opacity: 0;
+    width: 32px;
+    height: 32px;
+    padding: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+}
+
+.md__button-outlined:hover:before {
+    opacity: 0.08;
+}
+
+.md__button-outlined:focus:before {
+    opacity: 0.24;
+}
+
+.md__button-outlined:hover:focus:before {
+    opacity: 0.3;
+}
+
+.md__button-outlined:active:after {
+    opacity: 0.32;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0s;
+}
+
+.md__button-outlined:disabled:before,
+.md__button-outlined:disabled:after {
+    opacity: 0;
+}
+
+/* Filled textarea without txt and placeholder */
+
+.md__filled-textarea {
+    position: relative;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.md__filled-textarea > textarea {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    height: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    caret-color: #6200ee;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.04);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 16px;
+    transition: border-bottom 0.2s, background-color 0.2s;
+}
+
+.md__filled-textarea > textarea + span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #6200ee;
+    transform-origin: bottom center;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.md__filled-textarea > textarea:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-bottom-color: rgba(0, 0, 0, 0.87);
+}
+
+.md__filled-textarea > textarea:focus {
+    outline: none;
+}
+
+.md__filled-textarea > textarea:focus + span:after {
+    transform: scale(1);
+}
+
+/* Outlined textarea no text no placeholder */
+.md__outlined-textarea {
+    position: relative;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.md__outlined-textarea > textarea {
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    box-shadow: none;
+    width: 100%;
+    height: inherit;
+    padding: 16px;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    caret-color: #6200ee;
+    transition: border-color 0.2s, box-shadow 0.3s;
+}
+
+.md__outlined-textarea > textarea:hover {
+    border-color: rgba(0, 0, 0, 0.87);
+}
+
+.md__outlined-textarea > textarea:focus {
+    outline: none;
+    border-color: #6200ee;
+    box-shadow: inset 1px 0 #6200ee, inset -1px 0 #6200ee, inset 0 -1px #6200ee,
+        inset 0 1px #6200ee;
+}
+
+/* Checkboxes */
+.md__checkbox {
+    z-index: 0;
+    position: relative;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.md__checkbox > input {
+    appearance: none;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: none;
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.md__checkbox > span {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.md__checkbox > span:before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 3px 11px 3px 1px;
+    border: 2px solid;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.md__checkbox > span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 3px;
+    width: 0px;
+    height: 0px;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-color: rgba(255, 255, 255, 0.87);
+    transform-origin: left top;
+    transform: rotate(-45deg);
+}
+
+.md__checkbox > input:checked {
+    background-color: #6200ee;
+}
+
+.md__checkbox > input:checked + span:before {
+    border-color: #6200ee;
+    background-color: #6200ee;
+}
+
+.md__checkbox > input:checked + span:after {
+    width: 11px;
+    height: 4px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.md__checkbox > input:not(:disabled) + span:after {
+    will-change: width, height;
+    opacity: 0;
+}
+
+.md__checkbox > input:not(:disabled):checked + span:after {
+    opacity: 1;
+    transition: opacity 0.1s ease-out 0.2s, width 0.1s ease-out 0.25s,
+        height 0.1s ease-out 0.15s;
+}
+
+.md__checkbox:hover > input {
+    opacity: 0.08;
+}
+
+.md__checkbox > input:focus {
+    opacity: 0.12;
+}
+
+.md__checkbox:hover > input:focus {
+    opacity: 0.2;
+}
+
+.md__checkbox > input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+}
+
+.md__checkbox > input:active + span::before {
+    border-color: #6200ee;
+}
+
+.md__checkbox > input:checked:active + span::before {
+    border-color: transparent;
+    background-color: #6200ee;
+}
+
+.md__checkbox > input:disabled {
+    opacity: 0;
+}
+
+/* Radio buttons */
+.md__radio-button {
+    z-index: 0;
+    position: relative;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.md__radio-button > input {
+    appearance: none;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    display: block;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.md__radio-button > span {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+}
+
+.md__radio-button > span:before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 2px 10px 2px 0;
+    border: 2px solid;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    transition: border-color 0.2s;
+}
+
+.md__radio-button > span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #6200ee;
+    transform: translate(5px, 5px) scale(0);
+    transition: transform 0.2s;
+}
+
+.md__radio-button > input:checked {
+    background-color: #6200ee;
+}
+
+.md__radio-button > input:checked + span:before {
+    border-color: #6200ee;
+}
+
+.md__radio-button > input:checked + span::after {
+    transform: translate(5px, 5px) scale(1);
+}
+
+.md__radio-button:hover > input {
+    opacity: 0.08;
+}
+
+.md__radio-button > input:focus {
+    opacity: 0.12;
+}
+
+.md__radio-button:hover > input:focus {
+    opacity: 0.2;
+}
+
+.md__radio-button > input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+}
+
+.md__radio-button > input:active + span::before {
+    border-color: #6200ee;
+}
+
+.md__radio-button > input:disabled {
+    opacity: 0;
+}
+
+/* Lightbox */
+
+/* Using links */
+a.md__zoomed-lightbox__small {
+    display: block;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+a.md__zoomed-lightbox__small img,
+a.md__zoomed-lightbox__zoomed img {
+    border: none;
+}
+
+a.md__zoomed-lightbox__small img {
+    max-width: 100%;
+    height: auto;
+    cursor: zoom-in;
+}
+
+a.md__zoomed-lightbox__zoomed {
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    cursor: default;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+a.md__zoomed-lightbox__zoomed > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    max-width: 1080px;
+    height: 0;
+    opacity: 0;
+    cursor: zoom-out;
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out,
+        height 0.2s ease-in-out;
+}
+
+a.md__zoomed-lightbox__zoomed:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    outline: none;
+    opacity: 1;
+}
+
+a.md__zoomed-lightbox__zoomed:target > img {
+    opacity: 1;
+    width: 95%;
+    height: auto;
+}
+/* Using checkbox */
+#mdZoomCheck {
+    display: none;
+}
+
+.md__zoomed-checkbox img {
+    width: 480px;
+    height: 320px;
+    cursor: zoom-in;
+    transition: width 0.25s ease-in, height 0.25s ease-in;
+}
+
+#mdZoomCheck:checked ~ label > img {
+    width: 100%;
+    height: 100%;
+    cursor: zoom-out;
+}

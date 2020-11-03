@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Markdown basic syntax according to Material design</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Headings -->
+        <h6 class="topic-heading">Headings</h6>
+        <h1>Headline 1</h1>
+        <h2>Headline 2</h2>
+        <h3>Headline 3</h3>
+        <h4>Headline 4</h4>
+        <h5>Headline 5</h5>
+        <h6>Headline 6</h6>
+
+        <!-- Paragraphs -->  
+        <h6 class="topic-heading">Pragraphs</h6>
+        <p>I really like using Markdown.</p>
+        <p>I think I'll use it to format all of my documents from now on.</p>
+
+        <!-- Line breaks -->
+        <h6 class="topic-heading">Line breaks</h6>
+        <p>This is the first line.<br>
+        And this is the second line.</p>
+        
+
+        <!-- Emphasis -->
+        <h6 class="topic-heading">Emphasis</h6>
+
+        <!-- Bold -->
+        <p class="syntax-devider">Bold</p>
+        <p>I just love <strong>bold text</strong>.</p>
+
+        <!-- Italic -->
+        <p class="syntax-devider">Italic</p>
+        <p>Italicized text is the <em>cat's meow</em>.</p>
+
+        <!-- Bold and Italic -->
+        <p class="syntax-devider">Bold and italic</p>
+        <p>This text is <strong><em>really important</em></strong>.</p>
+        
+        <!-- Blockquotes -->
+        <h6 class="topic-heading">Blockquotes</h6>
+
+        <!-- Blockquote with single paragraph -->
+        <p class="syntax-devider">Blockquote with single paragraph</p>
+        <blockquote>
+            <p>
+                Dorothy followed her through many of the beautiful rooms in her castle.
+            </p>        
+                — <cite>Dorothy</cite>   
+        </blockquote>    
+
+        <!-- Blockquote with multiple paragraphs -->
+        <p class="syntax-devider">Blockquote with multiple paragraph</p>
+        <blockquote>
+            <p>Dorothy followed her through many of the beautiful rooms in her castle.</p> 
+            <p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+                — <cite>Dorothy</cite>
+        </blockquote>
+
+        <!-- Nested blockquotes -->
+        <p class="syntax-devider">Nested blockquote</p>
+        <blockquote>
+            <p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+            <blockquote>
+                <p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+            </blockquote>
+        </blockquote>
+
+        <!-- Blockquotes with other elements -->
+        <p class="syntax-devider">Blockquote with other elements</p>
+        <blockquote>
+            <h6>The quarterly results look great</h6>
+            <ul>
+                <li>Revenue was off the chart</li>
+                <li>Profits were higher then ever</li>
+            </ul>
+            <p><em>Everything</em> is going according to <strong>plan</strong>.</p>
+        </blockquote>
+
+        <!-- Lists -->
+        <h6 class="topic-heading">Lists</h6>
+        <!-- Ordered list -->
+        <p class="syntax-devider">Ordered list</p>
+        <ol>
+            <li>
+                Item 1
+            </li>
+            <li>
+                Item 2
+                <ol>
+                    <li>Subitem 1</li>
+                    <li>Subitem 2</li>
+                </ol>
+            </li>
+            <li>
+                Item 3
+            </li>
+        </ol>
+
+        <!-- Unordered list -->
+        <p class="syntax-devider">Unordered list</p>
+        <ul>
+            <li>
+                Item 1
+            </li>
+            <li>
+                Item 2
+                <ul>
+                    <li>Subitem 1</li>
+                    <li>Subitem 2</li>
+                </ul>
+            </li>
+            <li>
+                Item 3
+            </li>
+        </ul>  
+        
+        <!-- Code input -->
+        <h6 class="topic-heading">Code input</h6>
+        <pre>
+            <code>
+                &lthtml&gt
+                    &lthead&gt
+                    &lt/head&gt
+                &lt/html&gt
+            </code>
+        </pre>
+
+        <!-- Horizontal rule -->
+        <h6 class="topic-heading">Horizontal rule</h6>
+        <hr>
+
+        <!-- Links -->
+        <h6 class="topic-heading">Links</h6>
+        <p>Here is how the <a href="#">link style</a> looks like.</p>
+
+        <!-- Text fields -->
+        <h6 class="topic-heading">Text fileds</h6>
+        <p class="syntax-devider">Filled</p>
+        <label class="md__filled-textfield">
+            <input type="text" placeholder=" ">
+            <span>Textfield</span>
+        </label>
+
+        <p class="syntax-devider">Outlined</p>
+        <label class="md__outlined-textfield">
+            <input placeholder=" ">
+            <span>Textfield</span>
+        </label>
+
+        <!-- Buttons -->
+        <h6 class="topic-heading">Buttons</h6>
+        <p class="syntax-devider">Contained buttons</p>
+        <button class="md__button-contained">Button</button>
+
+        <p class="syntax-devider">Outlined buttons</p>
+        <button class="md__button-outlined">Button</button>
+
+        <!-- Textarea -->
+        <h6 class="topic-heading">Textarea</h6>
+        <p class="syntax-devider">Filled textarea</p>
+        <label class="md__filled-textarea">
+            <textarea cols="40" rows="8"></textarea>   
+            <span></span>     
+        </label>
+
+        <p class="syntax-devider">Outlined textarea</p>
+        <label class="md__outlined-textarea">
+            <textarea cols="40" rows="8"></textarea>           
+        </label>
+
+        <!-- Checkbox -->
+        <h6 class="topic-heading">Checkbox</h6>
+        <p class="syntax-devider">Regular checkbox</p>
+        <label class="md__checkbox">
+            <input type="checkbox">
+            <span>Checkbox</span>
+        </label>
+        <!-- Radio -->
+        <h6 class="topic-heading">Radio buttons</h6>
+        <label class="md__radio-button">
+            <input type="radio" name="radios">
+            <span>Option 1</span>
+        </label>
+        <br/>
+        <br/>
+        <label class="md__radio-button">
+            <input type="radio" name="radios">
+            <span>Option 2</span>
+        </label>
+
+        <!-- Lightbox -->    
+        <div class="md__zoomed-lightbox container">
+            <h6 class="topic-heading">Thumbnail zoom with lightbox</h6>
+            <p class="syntax-devider">Using links</p>
+            <p>I love coding at SoftEvol.
+                <a href="#img1-zoomed" class="md__zoomed-lightbox__small">
+                    <img src="../img1.jpg" alt="">
+                </a>
+            This is the place where you could dive into working process in comfortable surrounding. </p>
+            <a href="#close" class="md__zoomed-lightbox__zoomed" id="img1-zoomed">
+                <img src="../img1-zoomed.jpg" alt="">
+            </a>
+        </div>
+
+        <p class="syntax-devider">Using scaling</p>
+        <div class="md__zoomed-checkbox">
+            <p>I love coding at SoftEvol</p>
+            <input type="checkbox" id="mdZoomCheck">
+            <label for="mdZoomCheck">
+                <img src="../img1-zoomed.jpg">
+            </label>
+            <p>This is the place where you could dive into working process in comfortable surrounding.</p>
+        </div>
+    </div>  
+</body>
+</html>
